@@ -9,7 +9,7 @@ class SSHAnomalyDetector:
         # random_state ensures reproducible results
         self.model = IsolationForest(
             n_estimators=100, 
-            contamination=contamination, 
+            contamination='auto', 
             random_state=42
         )
 
